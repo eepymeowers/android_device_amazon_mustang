@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_karnak.mk
+    $(LOCAL_DIR)/lineage_mustang.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_karnak-user \
-    lineage_karnak-userdebug \
-    lineage_karnak-eng
+    lineage_mustang-user \
+    lineage_mustang-userdebug \
+    lineage_mustang-eng
