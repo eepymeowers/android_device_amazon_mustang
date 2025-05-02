@@ -151,13 +151,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    TetheringResOverlayMustang \
-    WifiResOverlayMustang \
-    FrameworksResOverlayMustang \
-    SimpleDeviceConfigOverlayMustang \
-    SettingsProviderOverlayMustang \
-    KeyGuardOverlayMustang \
-    SystemUiOverlayMustang 
+    TetheringResOverlayKarnak \
+    WifiResOverlayKarnak \
+    FrameworksResOverlayKarnak \
+    SimpleDeviceConfigOverlayKarnak \
+    SettingsProviderOverlayKarnak \
+    KeyGuardOverlayKarnak \
+    SystemUiOverlayKarnak 
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -269,7 +269,7 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v30.so
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/amazon/mustang/mustang-vendor.mk)
+$(call inherit-product, vendor/amazon/karnak/karnak-vendor.mk)
 
 # Inherit The Mediatek Proprietary Files
 $(call inherit-product, vendor/amazon/mt8163/mt8163-vendor.mk)
