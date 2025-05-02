@@ -20,6 +20,9 @@ $(call inherit-product-if-exists, vendor/vendor_gms/gms_full_tablet_wifionly.mk)
 # Android Go optimisations
 $(call inherit-product, device/amazon/mustang/go_opt.mk)
 
+# Inherit device configuration
+$(call inherit-product, device/amazon/mustang/full_mustang.mk)
+
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
