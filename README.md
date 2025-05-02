@@ -1,5 +1,4 @@
-# Device tree for Fire HD 8 2018
-
+# Device tree for Fire 7 2019
 ```
 #
 # Copyright (C) 2023 The LineageOS Project
