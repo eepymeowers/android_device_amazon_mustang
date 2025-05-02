@@ -9,7 +9,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit from device makefile.
-$(call inherit-product, device/amazon/karnak/device.mk)
+$(call inherit-product, device/amazon/mustang/device.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product-if-exists, vendor/lineage/config/common_full_tablet_wifionly.mk)
@@ -18,13 +18,13 @@ $(call inherit-product-if-exists, vendor/lineage/config/common_full_tablet_wifio
 $(call inherit-product-if-exists, vendor/vendor_gms/gms_full_tablet_wifionly.mk)
 
 # Android Go optimisations
-$(call inherit-product, device/amazon/karnak/go_opt.mk)
+$(call inherit-product, device/amazon/mustang/go_opt.mk)
 
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
-PRODUCT_NAME := lineage_karnak
-PRODUCT_DEVICE := karnak
+PRODUCT_NAME := lineage_mustang
+PRODUCT_DEVICE := mustang
 PRODUCT_MANUFACTURER := amzn
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Fire
