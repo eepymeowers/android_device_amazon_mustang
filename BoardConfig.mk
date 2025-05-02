@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/amazon/karnak
+DEVICE_PATH := device/amazon/mustang
 
 # APEX
 OVERRIDE_TARGET_FLATTEN_APEX := true
@@ -21,7 +21,7 @@ TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 AB_OTA_UPDATER := false
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := karnak
+TARGET_BOOTLOADER_BOARD_NAME := mustang
 TARGET_NO_BOOTLOADER := true
 
 # Boot Image
@@ -72,8 +72,8 @@ HWUI_COMPILE_FOR_PERF := true
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/amazon/karnak
-TARGET_KERNEL_CONFIG := lineageos_karnak_defconfig
+TARGET_KERNEL_SOURCE := kernel/amazon/mustang
+TARGET_KERNEL_CONFIG := lineageos_mustang_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(shell pwd)/prebuilts/linaro/linux-x86/aarch64/aarch64-linux-gnu/bin/aarch64-linux-gnu-
 TARGET_KERNEL_CLANG_COMPILE := false
 
@@ -81,13 +81,13 @@ TARGET_KERNEL_CLANG_COMPILE := false
 MALLOC_SVELTE := true
 
 # Partitions
-BOARD_FLASH_BLOCK_SIZE := 131072
-BOARD_BOOTIMAGE_PARTITION_SIZE     := 16777216
+BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 20971520
-BOARD_CACHEIMAGE_PARTITION_SIZE    := 524288000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3151745024
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 11633933824
-BOARD_VENDORIMAGE_PARTITION_SIZE   := 235929600
-BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 3253731328
+BOARD_CACHEIMAGE_PARTITION_SIZE := 499261440
+BOARD_VENDORIMAGE_PARTITION_SIZE := 224350208
+BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
@@ -104,7 +104,7 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt8163
 
 # Display
-TARGET_SCREEN_DENSITY := 213
+TARGET_SCREEN_DENSITY := 171
 
 # Verified Boot
 BOARD_AVB_ENABLE := false
@@ -133,6 +133,6 @@ WIFI_DRIVER_STATE_OFF := "0"
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
 # Inherit the proprietary files
-include vendor/amazon/karnak/BoardConfigVendor.mk
+include vendor/amazon/mustang/BoardConfigVendor.mk
 include vendor/amazon/mt8163/BoardConfigVendor.mk
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
